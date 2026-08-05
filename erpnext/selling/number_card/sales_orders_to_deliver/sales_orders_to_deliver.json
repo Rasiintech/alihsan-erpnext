@@ -1,5 +1,5 @@
 {
- "creation": "2020-07-20 20:17:16.596857",
+ "creation": "2024-12-30 03:30:38.331144",
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Sales Order",
@@ -10,12 +10,12 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Sales Orders to Deliver",
- "modified": "2020-07-22 14:19:28.833784",
+ "modified": "2025-12-07 17:05:14.301198",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Sales Orders to Deliver",
- "owner": "Administrator",
+ "owner": "ALIHSAN@gmail.com",
  "show_percentage_stats": 1,
- "stats_time_interval": "Weekly",
+ "stats_time_interval": "Daily",
  "type": "Document Type"
 }

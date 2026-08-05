@@ -90,6 +90,8 @@
   "rounded_total",
   "disable_rounded_total",
   "in_words",
+  "medical_director",
+  "operations_manager",
   "advance_paid",
   "discount_section",
   "apply_discount_on",
@@ -371,6 +373,7 @@
    "read_only": 1
   },
   {
+   "fetch_from": "supplier_address.email_id",
    "fieldname": "contact_email",
    "fieldtype": "Small Text",
    "label": "Contact Email",
@@ -1265,13 +1268,25 @@
    "fieldtype": "Tab Break",
    "label": "Connections",
    "show_dashboard": 1
+  },
+  {
+   "default": "______________________",
+   "fieldname": "medical_director",
+   "fieldtype": "Data",
+   "label": "Medical director"
+  },
+  {
+   "default": "_________________________",
+   "fieldname": "operations_manager",
+   "fieldtype": "Data",
+   "label": "Operations manager"
   }
  ],
  "icon": "fa fa-file-text",
  "idx": 105,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-05-24 11:16:41.195340",
+ "modified": "2025-05-26 13:31:26.905951",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Purchase Order",

@@ -30,18 +30,38 @@
   {
    "chart": "Item Shortage Summary",
    "width": "Half"
+  },
+  {
+   "chart": "Department  Request Status",
+   "width": "Half"
+  },
+  {
+   "chart": "Supplier Quotation Request Monthly",
+   "width": "Half"
+  },
+  {
+   "chart": "Purchase Order Monthly",
+   "width": "Half"
+  },
+  {
+   "chart": "Purchase Order Suppliers",
+   "width": "Half"
+  },
+  {
+   "chart": "Purchase Order Status",
+   "width": "Half"
   }
  ],
- "creation": "2020-07-20 21:01:04.549136",
+ "creation": "2024-12-30 03:30:38.373244",
  "dashboard_name": "Stock",
  "docstatus": 0,
  "doctype": "Dashboard",
  "idx": 0,
- "is_default": 1,
+ "is_default": 0,
  "is_standard": 1,
- "modified": "2020-07-22 13:09:33.096694",
+ "modified": "2025-12-07 14:26:54.938985",
  "modified_by": "Administrator",
  "module": "Stock",
  "name": "Stock",
- "owner": "Administrator"
+ "owner": "ALIHSAN@gmail.com"
 }

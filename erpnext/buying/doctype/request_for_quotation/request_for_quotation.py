@@ -301,6 +301,10 @@ def make_supplier_quotation_from_rfq(source_name, target_doc=None, for_supplier=
 			target_doc.buying_price_list = args.buying_price_list or frappe.db.get_value(
 				"Buying Settings", None, "buying_price_list"
 			)
+		
+		# 👇 Set the link to the RFQ
+		target_doc.request_for_quotation = source.name
+
 		set_missing_values(source, target_doc)
 
 	doclist = get_mapped_doc(
@@ -313,7 +317,10 @@ def make_supplier_quotation_from_rfq(source_name, target_doc=None, for_supplier=
 			},
 			"Request for Quotation Item": {
 				"doctype": "Supplier Quotation Item",
-				"field_map": {"name": "request_for_quotation_item", "parent": "request_for_quotation"},
+				"field_map": {
+					"name": "request_for_quotation_item",
+					"parent": "request_for_quotation"
+				},
 			},
 		},
 		target_doc,
@@ -321,6 +328,7 @@ def make_supplier_quotation_from_rfq(source_name, target_doc=None, for_supplier=
 	)
 
 	return doclist
+
 
 
 # This method is used to make supplier quotation from supplier's portal.

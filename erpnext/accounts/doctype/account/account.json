@@ -192,7 +192,7 @@
  "idx": 1,
  "is_tree": 1,
  "links": [],
- "modified": "2023-04-11 16:08:46.983677",
+ "modified": "2026-02-22 07:53:53.433502",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Account",
@@ -201,7 +201,6 @@
  "permissions": [
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "import": 1,
@@ -235,7 +234,6 @@
   },
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "import": 1,
@@ -244,6 +242,19 @@
    "report": 1,
    "role": "Accounts Manager",
    "set_user_permissions": 1,
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }

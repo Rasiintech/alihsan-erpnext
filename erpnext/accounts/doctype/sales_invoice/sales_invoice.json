@@ -22,6 +22,7 @@
   "column_break_14",
   "is_pos",
   "pos_profile",
+  "payments",
   "is_consolidated",
   "is_return",
   "return_against",
@@ -109,7 +110,6 @@
   "payments_tab",
   "payments_section",
   "cash_bank_account",
-  "payments",
   "section_break_84",
   "base_paid_amount",
   "column_break_86",
@@ -368,6 +368,7 @@
    "no_copy": 1,
    "oldfieldname": "posting_date",
    "oldfieldtype": "Date",
+   "read_only": 1,
    "reqd": 1,
    "search_index": 1
   },
@@ -2130,6 +2131,7 @@
    "read_only": 1
   },
   {
+   "default": "0",
    "depends_on": "allocate_advances_automatically",
    "description": "Advance payments allocated against orders will only be fetched",
    "fieldname": "only_include_allocated_payments",
@@ -2153,7 +2155,7 @@
    "link_fieldname": "consolidated_invoice"
   }
  ],
- "modified": "2023-04-28 14:15:59.901154",
+ "modified": "2025-08-20 11:21:42.793051",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Sales Invoice",
@@ -2164,7 +2166,6 @@
    "amend": 1,
    "cancel": 1,
    "create": 1,
-   "delete": 1,
    "email": 1,
    "print": 1,
    "read": 1,
@@ -2193,9 +2194,28 @@
    "write": 1
   },
   {
-   "permlevel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "import": 1,
+   "print": 1,
    "read": 1,
-   "role": "All"
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Lab",
+   "share": 1,
+   "write": 1
   }
  ],
  "quick_entry": 1,

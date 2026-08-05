@@ -1,0 +1,32 @@
+{
+ "chart_name": "Purchase Order Status",
+ "chart_type": "Group By",
+ "creation": "2025-12-07 14:19:24.630570",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Purchase Order",
+ "filters_json": "[[\"Purchase Order\",\"transaction_date\",\"Timespan\",\"last month\",false]]",
+ "group_by_based_on": "status",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "last_synced_on": "2025-12-07 14:26:28.776379",
+ "modified": "2025-12-07 14:26:54.890807",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Purchase Order Status",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "time_interval": "Monthly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "y_axis": []
+}

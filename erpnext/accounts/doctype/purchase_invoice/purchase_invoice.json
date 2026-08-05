@@ -417,7 +417,8 @@
    "fieldtype": "Link",
    "label": "Select Supplier Address",
    "options": "Address",
-   "print_hide": 1
+   "print_hide": 1,
+   "read_only": 1
   },
   {
    "fieldname": "address_display",
@@ -1364,12 +1365,12 @@
    "depends_on": "eval:doc.update_stock && doc.is_internal_supplier",
    "fieldname": "set_from_warehouse",
    "fieldtype": "Link",
+   "ignore_user_permissions": 1,
    "label": "Set From Warehouse",
    "no_copy": 1,
    "options": "Warehouse",
    "print_hide": 1,
    "print_width": "50px",
-   "ignore_user_permissions": 1,
    "width": "50px"
   },
   {
@@ -1573,7 +1574,7 @@
  "idx": 204,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-04-29 12:57:50.832598",
+ "modified": "2025-07-28 13:49:10.911403",
  "modified_by": "Administrator",
  "module": "Accounts",
  "name": "Purchase Invoice",
@@ -1584,6 +1585,7 @@
    "amend": 1,
    "cancel": 1,
    "create": 1,
+   "delete": 1,
    "email": 1,
    "print": 1,
    "read": 1,

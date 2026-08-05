@@ -1,0 +1,32 @@
+{
+ "based_on": "modified",
+ "chart_name": "Supplier Quotation Request Monthly",
+ "chart_type": "Count",
+ "creation": "2025-12-07 14:08:14.487968",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Supplier Quotation",
+ "filters_json": "[]",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "last_synced_on": "2025-12-07 14:12:11.620025",
+ "modified": "2025-12-07 14:12:48.570392",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Supplier Quotation Request Monthly",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "time_interval": "Monthly",
+ "timeseries": 1,
+ "timespan": "Last Year",
+ "type": "Line",
+ "use_report_chart": 0,
+ "y_axis": []
+}

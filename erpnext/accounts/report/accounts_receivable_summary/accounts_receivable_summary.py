@@ -50,7 +50,7 @@ class AccountsReceivableSummary(ReceivablePayableReport):
 			gl_balance_map = get_gl_balance(self.filters.report_date)
 
 		for party, party_dict in self.party_total.items():
-			if party_dict.outstanding == 0:
+			if round(flt(party_dict.outstanding), 2) == 0:
 				continue
 
 			row = frappe._dict()

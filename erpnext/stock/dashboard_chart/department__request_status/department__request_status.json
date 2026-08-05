@@ -1,0 +1,32 @@
+{
+ "chart_name": "Department  Request Status",
+ "chart_type": "Group By",
+ "creation": "2025-12-07 11:52:12.560468",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Request",
+ "filters_json": "[[\"Request\",\"modified\",\"Timespan\",\"last month\",false]]",
+ "group_by_based_on": "status",
+ "group_by_type": "Count",
+ "idx": 0,
+ "is_public": 0,
+ "is_standard": 1,
+ "last_synced_on": "2025-12-07 11:57:12.962436",
+ "modified": "2025-12-07 11:57:32.236717",
+ "modified_by": "Administrator",
+ "module": "Stock",
+ "name": "Department  Request Status",
+ "number_of_groups": 0,
+ "owner": "Administrator",
+ "roles": [
+  {
+   "role": "All"
+  }
+ ],
+ "time_interval": "Monthly",
+ "timeseries": 0,
+ "timespan": "Last Year",
+ "type": "Bar",
+ "use_report_chart": 0,
+ "y_axis": []
+}

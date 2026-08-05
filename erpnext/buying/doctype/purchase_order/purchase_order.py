@@ -503,6 +503,13 @@ def make_purchase_receipt(source_name, target_doc=None):
 			(flt(obj.qty) - flt(obj.received_qty)) * flt(obj.rate) * flt(source_parent.conversion_rate)
 		)
 
+	def set_missing_values(source, target):
+		# 👇 Set the Purchase Order name
+		target.purchase_order = source.name
+
+		target.run_method("set_missing_values")
+		target.run_method("calculate_taxes_and_totals")
+
 	doc = get_mapped_doc(
 		"Purchase Order",
 		source_name,
@@ -527,7 +534,10 @@ def make_purchase_receipt(source_name, target_doc=None):
 				"condition": lambda doc: abs(doc.received_qty) < abs(doc.qty)
 				and doc.delivered_by_supplier != 1,
 			},
-			"Purchase Taxes and Charges": {"doctype": "Purchase Taxes and Charges", "add_if_empty": True},
+			"Purchase Taxes and Charges": {
+				"doctype": "Purchase Taxes and Charges",
+				"add_if_empty": True,
+			},
 		},
 		target_doc,
 		set_missing_values,
@@ -536,6 +546,7 @@ def make_purchase_receipt(source_name, target_doc=None):
 	doc.set_onload("ignore_price_list", True)
 
 	return doc
+
 
 
 @frappe.whitelist()

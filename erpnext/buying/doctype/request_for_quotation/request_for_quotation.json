@@ -84,6 +84,7 @@
    "width": "50%"
   },
   {
+   "allow_on_submit": 1,
    "default": "Today",
    "fieldname": "transaction_date",
    "fieldtype": "Date",
@@ -291,7 +292,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2023-01-31 23:22:06.684694",
+ "modified": "2025-07-27 13:13:22.905513",
  "modified_by": "Administrator",
  "module": "Buying",
  "name": "Request for Quotation",

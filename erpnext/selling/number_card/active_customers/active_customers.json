@@ -1,5 +1,5 @@
 {
- "creation": "2020-07-20 20:17:16.653866",
+ "creation": "2024-12-30 03:30:38.335243",
  "docstatus": 0,
  "doctype": "Number Card",
  "document_type": "Customer",
@@ -10,12 +10,12 @@
  "is_public": 1,
  "is_standard": 1,
  "label": "Active Customers",
- "modified": "2020-07-22 14:20:32.268103",
+ "modified": "2025-12-07 17:45:44.775843",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Active Customers",
- "owner": "Administrator",
+ "owner": "ALIHSAN@gmail.com",
  "show_percentage_stats": 1,
- "stats_time_interval": "Monthly",
+ "stats_time_interval": "Daily",
  "type": "Document Type"
 }

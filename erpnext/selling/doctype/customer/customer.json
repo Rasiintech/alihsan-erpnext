@@ -96,7 +96,7 @@
    "label": "Series",
    "no_copy": 1,
    "options": "CUST-.YYYY.-",
-   "set_only_once": 1
+   "reqd": 1
   },
   {
    "depends_on": "eval:doc.customer_type!='Company'",
@@ -351,6 +351,7 @@
   {
    "fieldname": "payment_terms",
    "fieldtype": "Link",
+   "hidden": 1,
    "label": "Default Payment Terms Template",
    "options": "Payment Terms Template"
   },
@@ -448,9 +449,11 @@
   },
   {
    "default": "0",
+   "depends_on": "eval:doc.allow_credit",
    "fieldname": "credit_limits",
    "fieldtype": "Table",
    "label": "Credit Limit",
+   "mandatory_depends_on": "eval:doc.allow_credit",
    "options": "Customer Credit Limit"
   },
   {
@@ -568,85 +571,14 @@
    "link_fieldname": "party"
   }
  ],
- "modified": "2022-11-08 15:52:34.462657",
+ "modified": "2026-04-15 11:31:53.385758",
  "modified_by": "Administrator",
  "module": "Selling",
  "name": "Customer",
  "name_case": "Title Case",
  "naming_rule": "By \"Naming Series\" field",
  "owner": "Administrator",
- "permissions": [
-  {
-   "create": 1,
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales User",
-   "share": 1,
-   "write": 1
-  },
-  {
-   "permlevel": 1,
-   "read": 1,
-   "role": "Sales User"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Manager"
-  },
-  {
-   "create": 1,
-   "delete": 1,
-   "email": 1,
-   "export": 1,
-   "import": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Sales Master Manager",
-   "set_user_permissions": 1,
-   "share": 1,
-   "write": 1
-  },
-  {
-   "permlevel": 1,
-   "read": 1,
-   "role": "Sales Master Manager",
-   "write": 1
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Stock User"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Stock Manager"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Accounts User"
-  },
-  {
-   "email": 1,
-   "print": 1,
-   "read": 1,
-   "report": 1,
-   "role": "Accounts Manager"
-  }
- ],
+ "permissions": [],
  "quick_entry": 1,
  "search_fields": "customer_name,customer_group,territory, mobile_no,primary_address",
  "show_name_in_global_search": 1,
