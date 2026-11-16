@@ -1,0 +1,37 @@
+{
+ "add_total_row": 1,
+ "columns": [],
+ "creation": "2025-12-08 13:50:33.068520",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letter_head": "Logo",
+ "modified": "2026-11-14 10:23:14.196014",
+ "modified_by": "Administrator",
+ "module": "Accounts",
+ "name": "Insurance Reports",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \r\n    si.patient AS \"PID\",\r\n    si.patient_name AS \"Patient Name:data:170\",\r\n    si.name AS \"Name\",\r\n    sii.item_group AS \"Item Group\",\r\n\r\n    /* If invoice is insurance=1 use si.insurance, otherwise use customer (insurance company) */\r\n    CASE \r\n        WHEN IFNULL(si.is_insurance, 0) = 1 THEN si.insurance\r\n        ELSE si.customer\r\n    END AS \"Insurance:Data:200\",\r\n\r\n    SUM(sii.net_amount) AS \"Total Amount:Currency:170\"\r\nFROM \r\n    `tabSales Invoice` si\r\nJOIN \r\n    `tabSales Invoice Item` sii ON si.name = sii.parent\r\nLEFT JOIN\r\n    `tabCustomer` c ON c.name = si.customer\r\nWHERE \r\n    si.docstatus = 1\r\n    AND si.status IN ('Unpaid', 'Paid', 'Overdue')\r\n    AND si.posting_date BETWEEN %(from)s AND %(to)s\r\n    AND (\r\n        IFNULL(si.is_insurance, 0) = 1\r\n        OR (\r\n            IFNULL(si.is_insurance, 0) = 0\r\n            AND c.customer_group = 'Insurance'\r\n        )\r\n    )\r\nGROUP BY \r\n    si.patient, si.patient_name, si.name, sii.item_group,\r\n    CASE \r\n        WHEN IFNULL(si.is_insurance, 0) = 1 THEN si.insurance\r\n        ELSE si.customer\r\n    END\r\nORDER BY \r\n    SUM(sii.net_amount) DESC;",
+ "ref_doctype": "Sales Invoice",
+ "report_name": "Insurance Reports",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Accounts User"
+  },
+  {
+   "role": "Accounts Manager"
+  },
+  {
+   "role": "Employee Self Service"
+  },
+  {
+   "role": "System Manager"
+  }
+ ]
+}

@@ -144,8 +144,8 @@
    "type": "Link"
   }
  ],
- "modified": "2023-05-24 14:47:22.597974",
- "modified_by": "Administrator",
+ "modified": "2026-10-13 02:08:14.077685",
+ "modified_by": "liban@alihsan.so",
  "module": "Quality Management",
  "name": "Quality",
  "number_cards": [],
@@ -202,6 +202,11 @@
    "link_to": "Non Conformance",
    "stats_filter": "{\"status\": \"Open\"}",
    "type": "DocType"
+  },
+  {
+   "label": "Clinical Documentation Quality",
+   "link_to": "ASH Clinical Documentation Quality V1",
+   "type": "Report"
   }
  ],
  "title": "Quality"
